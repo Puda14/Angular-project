@@ -6,7 +6,7 @@ export class ProductInOrder {
     productPrice: number;
     productStock: number;
     productDescription: string;
-    productIcon: string;
+    productImage: string;
     categoryType: number;
     count: number;
 
@@ -16,7 +16,7 @@ export class ProductInOrder {
         this.productPrice = productInfo.productPrice;
         this.productStock = productInfo.productStock;
         this.productDescription = productInfo.productDescription;;
-        this.productIcon = productInfo.productIcon;
+        this.productImage = productInfo.productImage;
         this.categoryType = productInfo.categoryType;
         this.count = quantity;
     }
