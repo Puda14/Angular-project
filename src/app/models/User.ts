@@ -17,7 +17,7 @@ export class User {
     role: string;
 
     constructor(){
-        this.active = 't';
+        this.active = 'true';
         this.role = Role.Customer;
     }
 }

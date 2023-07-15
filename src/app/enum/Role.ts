@@ -3,6 +3,6 @@ export enum Role {
     // Employee = 'ROLE_EMPLOYEE',
     // Manager = 'ROLE_MANAGER'
     Customer = 'CUSTOMER',
-    Employee = 'REMPLOYEE',
+    Employee = 'EMPLOYEE',
     Manager = 'MANAGER'
 }
