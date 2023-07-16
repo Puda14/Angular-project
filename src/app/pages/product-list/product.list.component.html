@@ -35,10 +35,14 @@
                 Edit
             </a>
 
-            <a *ngIf="currentUser?.role == Role.Customer" role="button" class="btn btn-outline-danger"
-            (click)="remove(page.content, productInfo.productId)" routerLink="./">
-                Remove
+            <a style="display: block" class="btn btn-outline-primary" role="button"
+            routerLink="/seller/product/{{productInfo.productId}}/delete">
+                Delete
             </a>
+            <!-- <a *ngIf="currentUser?.role == Role.Manager" role="button" class="btn btn-outline-danger"
+            (click)="remove(page.content, productInfo.productId)" routerLink="/seller/product/{{productInfo.productId}}/delete">
+                Delete
+            </a> -->
 
         </td>
 

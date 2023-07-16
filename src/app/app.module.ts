@@ -22,6 +22,7 @@ import {UserDetailComponent} from './pages/user-edit/user-detail.component';
 import {ProductEditComponent} from './pages/product-edit/product-edit.component';
 import { ToastComponent } from './pages/toast/toast.component';
 import {ProductNewComponent} from './pages/product-new/product-new.component';
+import {ProductDeleteComponent} from './pages/product-delete/product-delete.component';
 
 @NgModule({
     declarations: [
@@ -39,7 +40,8 @@ import {ProductNewComponent} from './pages/product-new/product-new.component';
         UserDetailComponent,
         ProductEditComponent,
         ToastComponent,
-        ProductNewComponent
+        ProductNewComponent,
+        ProductDeleteComponent
 
     ],
     imports: [

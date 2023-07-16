@@ -13,6 +13,7 @@ import {UserDetailComponent} from "./pages/user-edit/user-detail.component";
 import {ProductEditComponent} from "./pages/product-edit/product-edit.component";
 import {Role} from "./enum/Role";
 import {ProductNewComponent} from './pages/product-new/product-new.component';
+import {ProductDeleteComponent} from './pages/product-delete/product-delete.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/product', pathMatch: 'full'},
@@ -51,6 +52,14 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         data: {roles: [Role.Employee, Role.Manager]}
     },
+    {
+        
+        path: 'seller/product/:id/delete',
+        component: ProductDeleteComponent,
+        canActivate: [AuthGuard],
+        data: {roles: [Role.Employee, Role.Manager]}
+
+    }
 
 ];
 
