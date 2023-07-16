@@ -19,7 +19,7 @@ export class NavigationComponent implements OnInit, OnDestroy {
     currentUser: JwtResponse;
     root = '/';
     Role = Role;
-
+    banner : boolean;
     constructor(private userService: UserService,
                 private router: Router,
     ) {
@@ -33,8 +33,10 @@ export class NavigationComponent implements OnInit, OnDestroy {
             this.currentUser = user;
             if (!user || user.role == Role.Customer) {
                 this.root = '/';
+                this.banner = true;
             } else {
                 this.root = '/seller';
+                this.banner = false;
             }
         });
     }
