@@ -1,7 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-dark">
-  
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top sport-navbar">
   <a class="navbar-brand" [routerLink]="root">
-    <img src="/assets/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+    <img src="/assets/logo.png" width="40" height="45" class="d-inline-block align-top" alt="">
     Sport Shop
   </a>
 
@@ -13,13 +12,13 @@
 
     <div class="navbar-nav" *ngIf="!currentUser || currentUser.role == Role.Customer">
 
-      <a class="nav-item nav-link " routerLink="/category/0">
+      <a class="nav-item nav-link" routerLink="/category/0">
         Badminton
       </a>
       <a class="nav-item nav-link" routerLink="/category/1">
         Table Tennis
       </a>
-      <a class="nav-item nav-link " routerLink="/category/2">
+      <a class="nav-item nav-link" routerLink="/category/2">
         Football
       </a>
       <a class="nav-item nav-link" routerLink="/category/3">
@@ -29,23 +28,23 @@
     </div>
 
     <div class="navbar-nav ml-auto">
-      <a *ngIf="!currentUser || currentUser.role == Role.Customer" class="nav-item nav-link " routerLink="/cart">
+      <a *ngIf="!currentUser || currentUser.role == Role.Customer" class="nav-item nav-link" routerLink="/cart">
         <i class="fas fa-shopping-cart"></i>
         Cart
       </a>
 
       <ng-container *ngIf="currentUser; else noUser">
-        <a *ngIf = "currentUser.role == Role.Manager" class="nav-item nav-link" routerLink = "/seller/product/new">
-            Add Product
+        <a *ngIf="currentUser.role == Role.Manager" class="nav-item nav-link" routerLink="/seller/product/new">
+          Add Product
         </a>
-        <a class="nav-item nav-link " routerLink="/order">
+        <a class="nav-item nav-link" routerLink="/order">
           <i class="fas fa-list-ul"></i>
           Orders
         </a>
-        <a class="nav-item nav-link " routerLink="/profile">
+        <a class="nav-item nav-link" routerLink="/profile">
           {{name}}
         </a>
-        <a class="nav-item nav-link " (click)="logout()" routerLink="/login" [queryParams]="{logout: true}">
+        <a class="nav-item nav-link" (click)="logout()" routerLink="/login" [queryParams]="{logout: true}">
           Sign Out
         </a>
       </ng-container>
@@ -53,65 +52,14 @@
         <a class="nav-item nav-link login" routerLink="/login">
           Sign In
         </a>
-        <a class="nav-item nav-link " routerLink="/register">
+        <a class="nav-item nav-link" routerLink="/register">
           Sign Up
         </a>
       </ng-template>
-      <!-- <div class="dialog">
 
-        <div class="register">
-            <div class="btn-exit">
-                <i class='bx bxs-x-circle'></i>
-            </div>
-            
-            <form class="form" id="login">
-                <h1 class="form__title">Login</h1>
-                <div class="form__message form__message--error"></div>
-                <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Username or email">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <button class="form__button" type="submit">Continue</button>
-                <p class="form__text">
-                    <a href="#" class="form__link">Forgot your password?</a>
-                </p>
-                <p class="form__text">
-                    <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
-                </p>
-            </form>
-            <form class="form form--hidden" id="createAccount">
-                <h1 class="form__title">Create Account</h1>
-                <div class="form__message form__message--error"></div>
-                <div class="form__input-group">
-                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <div class="form__input-group">
-                    <input type="text" class="form__input" autofocus placeholder="Email Address">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Password">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <div class="form__input-group">
-                    <input type="password" class="form__input" autofocus placeholder="Confirm password">
-                    <div class="form__input-error-message"></div>
-                </div>
-                <button class="form__button" type="submit">Continue</button>
-                <p class="form__text">
-                    <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
-                </p>
-            </form>
-        </div>
-    </div> -->
     </div>
   </div>
-</nav>
+</nav>  
 
 <section class="slider2 cid-sglkVxQRxA" id="slider2-v">
   <div class="container-fluid">
