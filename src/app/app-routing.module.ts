@@ -15,6 +15,7 @@ import {Role} from "./enum/Role";
 import {ProductNewComponent} from './pages/product-new/product-new.component';
 import {ProductDeleteComponent} from './pages/product-delete/product-delete.component';
 import {UserListComponent}  from './pages/user-list/user-list.component';
+import { UserDeleteComponent } from './pages/user-delete/user-delete.component';
 
 
 const routes: Routes = [
@@ -69,6 +70,12 @@ const routes: Routes = [
         canActivate: [AuthGuard],
         data: {roles: [Role.Manager]}
 
+    },
+    {
+        path: 'seller/management/delete/:email',
+        component: UserDeleteComponent,
+        canActivate : [AuthGuard],
+        data : {roles : [Role.Manager]}
     }
 
 ];

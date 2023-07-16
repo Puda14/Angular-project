@@ -75,6 +75,11 @@ export class UserService {
         )
 
     }
+
+    delete(email : string) : Observable<any>{
+        const url = `${apiUrl}/seller/management/delete/${email}`;
+        return this.http.delete(url);
+    }
     /**
      * Handle Http operation that failed.
      * Let the app continue.

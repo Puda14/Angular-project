@@ -24,6 +24,7 @@ import { ToastComponent } from './pages/toast/toast.component';
 import {ProductNewComponent} from './pages/product-new/product-new.component';
 import {ProductDeleteComponent} from './pages/product-delete/product-delete.component';
 import {UserListComponent}  from './pages/user-list/user-list.component';
+import { UserDeleteComponent } from './pages/user-delete/user-delete.component';
 
 @NgModule({
     declarations: [
@@ -43,7 +44,8 @@ import {UserListComponent}  from './pages/user-list/user-list.component';
         ToastComponent,
         ProductNewComponent,
         ProductDeleteComponent,
-        UserListComponent
+        UserListComponent,
+        UserDeleteComponent
 
     ],
     imports: [
