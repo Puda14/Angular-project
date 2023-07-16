@@ -13,7 +13,7 @@
     <div class="navbar-nav" *ngIf="!currentUser || currentUser.role == Role.Customer">
 
       <a class="nav-item nav-link" routerLink="/category/0">
-        Badminton
+        Badminton 
       </a>
       <a class="nav-item nav-link" routerLink="/category/1">
         Table Tennis
@@ -69,67 +69,35 @@
   </div>
 </nav>  
 
-<section class="slider2 cid-sglkVxQRxA" id="slider2-v">
-  <div class="container-fluid">
-      <div class="row justify-content-center">
-          <div class="col-12 col-md-10 col-lg-12">
-              <div class="carousel slide" id="shwtnjuVnZ" data-ride="carousel" data-interval="5000">
-
-                  <ol class="carousel-indicators">
-                      <li data-slide-to="0" class="active" data-target="#shwtnjuVnZ"></li>
-                      <li data-slide-to="1" data-target="#shwtnjuVnZ"></li>
-                      <li data-slide-to="2" data-target="#shwtnjuVnZ"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                      <div class="carousel-item slider-image item active">
-                          <div class="item-wrapper">
-                              <img class="d-block w-100" src="/assets/01.jpg">
-                              <div class="carousel-caption d-none d-md-block">
-                                  <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
-                                  </h5>
-                                  <p class="mbr-section-text mbr-fonts-style display-7">
-                                  </p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="carousel-item slider-image item">
-                          <div class="item-wrapper">
-                              <img class="d-block w-100" src="/assets/02.jpg" data-slide-to="1">
-                              <div class="carousel-caption d-none d-md-block">
-                                  <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
-                                      <strong></strong>
-                                  </h5>
-                                  <p class="mbr-section-text mbr-fonts-style display-7">
-                                      </p>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="carousel-item slider-image item">
-                          <div class="item-wrapper">
-                              <img class="d-block w-100" src="/assets/03.jpg" data-slide-to="2">
-                              <div class="carousel-caption d-none d-md-block">
-                                  <h5 class="mbr-section-subtitle mbr-fonts-style display-5">
-                                      <strong></strong>
-                                  </h5>
-                                  <p class="mbr-section-text mbr-fonts-style display-7">
-                                      </p>
-                              </div>
-                          </div>
-                      </div>
-
-                  </div>
-                  <a class="carousel-control carousel-control-prev" role="button" data-slide="prev"
-                      href="#shwtnjuVnZ">
-                      <span class="mobi-mbri mobi-mbri-arrow-prev" aria-hidden="true"></span>
-                      <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control carousel-control-next" role="button" data-slide="next"
-                      href="#shwtnjuVnZ">
-                      <span class="mobi-mbri mobi-mbri-arrow-next" aria-hidden="true"></span>
-                      <span class="sr-only">Next</span>
-                  </a>
-              </div>
-          </div>
+<section class="hero-section mt-5">
+  <div class="card-grid">
+    <a class="card" href="http://localhost:4200/category/0">
+      <div class="card__background" style="background-image: url(https://res.cloudinary.com/dlgyapagf/image/upload/v1689505776/Sport-Shop/cute-boy-playing-badminton-cartoon-vector-icon-illustration-people-sport-icon-concept-isolated-premium-vector-flat-cartoon-style_138676-4044_tf55et.avif)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Badminton</h3>
       </div>
+    </a>
+    <a class="card" href="http://localhost:4200/category/1">
+      <div class="card__background" style="background-image: url(https://res.cloudinary.com/dlgyapagf/image/upload/v1689506981/Sport-Shop/Table_Tennis_Match_kkc8lv.gif)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">TableTennis</h3>
+      </div>
+    </a>
+    <a class="card" href="http://localhost:4200/category/2">
+      <div class="card__background" style="background-image: url(https://res.cloudinary.com/dlgyapagf/image/upload/v1689504962/Sport-Shop/033_i8kxpu.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Football</h3>
+      </div>
+    </a>
+    <a class="card" href="http://localhost:4200/category/3">
+      <div class="card__background" style="background-image: url(https://res.cloudinary.com/dlgyapagf/image/upload/v1689506078/Sport-Shop/Sports_illustration_lvypju.jpg)"></div>
+      <div class="card__content">
+        <p class="card__category">Category</p>
+        <h3 class="card__heading">Special</h3>
+      </div>
+    </a>
   </div>
 </section>
