@@ -68,6 +68,13 @@ export class UserService {
         return this.http.get<User>(url);
     }
 
+    getAllByRole(role : string,page: number, size: number) : Observable<any>{
+        const url = `${apiUrl}/seller/management/${role}?page=${page}&size=${size}`;
+        return this.http.get(url).pipe(
+
+        )
+
+    }
     /**
      * Handle Http operation that failed.
      * Let the app continue.
