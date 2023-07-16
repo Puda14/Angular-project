@@ -38,7 +38,7 @@ onSubmit() {
         this.delete();
         this.deleted = true;
     } 
-    this.router.navigate(['/product']);
+    this.router.navigate(['/seller/management']);
 
 }
 
