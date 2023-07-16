@@ -61,46 +61,41 @@ body {
   }
   
   .subnav {
-    float: left;
-    overflow: hidden;
+    position: relative;
+    display: inline-block;
   }
   
   /* Subnav button */
   .subnav .subnavbtn {
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+  font-family: 'Muli', sans-serif;
+  font-size: 20px;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   }
   .navbar a:hover, .subnav:hover .subnavbtn {
-    background-color: red;
+    color: #fff;
   }
   
   /* Style the subnav content - positioned absolute */
   .subnav-content {
     display: none;
     position: absolute;
-    left: 0;
-    background-color: blue;
-    width: 100%;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
   /* Style the subnav links */
   .subnav-content a {
-    float: inherit;
-    color: white;
+    color: #fff;
+    padding: 12px 16px;
     text-decoration: none;
-  }
-  
-  /* Add a grey background color on hover */
-  .subnav-content a:hover {
-    background-color: #eee;
-    color: black;
+    display: block;
+    font-family: 'Muli', sans-serif;
+    font-size: 16px;
   }
   
   /* When you move the mouse over the subnav container, open the subnav content */

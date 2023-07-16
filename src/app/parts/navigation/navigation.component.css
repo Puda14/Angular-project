@@ -6,21 +6,21 @@
 } */
   
   .sport-navbar {
-    background-color: #072840;
+    background-color: #000000;
   }
 
 
   .sport-navbar .navbar-brand {
     font-family: 'Muli', sans-serif;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
   }
 
 
   .sport-navbar .navbar-nav .nav-link {
     font-family: 'Muli', sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     margin-right: 10px;
     color: #fff;
   }

@@ -65,6 +65,4 @@ export class CardComponent implements OnInit, OnDestroy {
     }
 
   }
-
-
 }
