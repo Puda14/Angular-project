@@ -42,19 +42,20 @@ export class ProductEditComponent implements OnInit, AfterContentChecked {
     onSubmit() {
         if (this.productId) {
             this.update();
-        } else {
-            this.add();
-        }
+        } 
+        // else {
+        //     this.add();
+        // }
     }
 
-    add() {
-        this.productService.create(this.product).subscribe(prod => {
-                if (!prod) throw new Error;
-                this.router.navigate(['/']);
-            },
-            e => {
-            });
-    }
+    // add() {
+    //     this.productService.create(this.product).subscribe(prod => {
+    //             if (!prod) throw new Error;
+    //             this.router.navigate(['/']);
+    //         },
+    //         e => {
+    //         });
+    // }
 
     ngAfterContentChecked(): void {
         console.log(this.product);

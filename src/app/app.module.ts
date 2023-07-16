@@ -21,6 +21,7 @@ import {ProductListComponent} from './pages/product-list/product.list.component'
 import {UserDetailComponent} from './pages/user-edit/user-detail.component';
 import {ProductEditComponent} from './pages/product-edit/product-edit.component';
 import { ToastComponent } from './pages/toast/toast.component';
+import {ProductNewComponent} from './pages/product-new/product-new.component';
 
 @NgModule({
     declarations: [
@@ -38,6 +39,7 @@ import { ToastComponent } from './pages/toast/toast.component';
         UserDetailComponent,
         ProductEditComponent,
         ToastComponent,
+        ProductNewComponent
 
     ],
     imports: [

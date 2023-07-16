@@ -12,6 +12,7 @@ import {ProductListComponent} from "./pages/product-list/product.list.component"
 import {UserDetailComponent} from "./pages/user-edit/user-detail.component";
 import {ProductEditComponent} from "./pages/product-edit/product-edit.component";
 import {Role} from "./enum/Role";
+import {ProductNewComponent} from './pages/product-new/product-new.component';
 
 const routes: Routes = [
     {path: '', redirectTo: '/product', pathMatch: 'full'},
@@ -45,10 +46,10 @@ const routes: Routes = [
         data: {roles: [Role.Manager, Role.Employee]}
     },
     {
-        path: 'seller/product/:id/new',
-        component: ProductEditComponent,
+        path: 'seller/product/new',
+        component: ProductNewComponent,
         canActivate: [AuthGuard],
-        data: {roles: [Role.Employee]}
+        data: {roles: [Role.Employee, Role.Manager]}
     },
 
 ];
