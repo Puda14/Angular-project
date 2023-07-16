@@ -35,7 +35,7 @@
       </a>
 
       <ng-container *ngIf="currentUser; else noUser">
-        <a class="nav-item nav-link" routerLink = "/seller/product/new">
+        <a *ngIf = "currentUser.role == Role.Manager" class="nav-item nav-link" routerLink = "/seller/product/new">
             Add Product
         </a>
         <a class="nav-item nav-link " routerLink="/order">
