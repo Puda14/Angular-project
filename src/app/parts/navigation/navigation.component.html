@@ -34,6 +34,11 @@
       </a>
 
       <ng-container *ngIf="currentUser; else noUser">
+        
+        <a *ngIf="currentUser.role == Role.Manager" class="nav-item nav-link" routerLink='/seller/revenue/show'>
+          Show Revenue
+        </a>
+
         <div class="subnav  mr-auto" *ngIf="currentUser.role == Role.Manager">
           <button class="subnavbtn">Manage User <i class="fa fa-caret-down"></i></button>
           <div *ngIf="currentUser.role == Role.Manager" class="subnav-content">

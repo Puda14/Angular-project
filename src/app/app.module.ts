@@ -25,6 +25,7 @@ import {ProductNewComponent} from './pages/product-new/product-new.component';
 import {ProductDeleteComponent} from './pages/product-delete/product-delete.component';
 import {UserListComponent}  from './pages/user-list/user-list.component';
 import { UserDeleteComponent } from './pages/user-delete/user-delete.component';
+import { RevenueListComponent } from './pages/revenue-list/revenue-list.component';
 
 @NgModule({
     declarations: [
@@ -45,7 +46,8 @@ import { UserDeleteComponent } from './pages/user-delete/user-delete.component';
         ProductNewComponent,
         ProductDeleteComponent,
         UserListComponent,
-        UserDeleteComponent
+        UserDeleteComponent,
+        RevenueListComponent
 
     ],
     imports: [
