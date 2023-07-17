@@ -35,6 +35,9 @@
 
       <ng-container *ngIf="currentUser; else noUser">
         
+        <a *ngIf="currentUser.role == Role.Manager" class="nav-item nav-link" routerLink='/seller/revenue/cal'>
+          Get Revenue
+        </a>
         <a *ngIf="currentUser.role == Role.Manager" class="nav-item nav-link" routerLink='/seller/revenue/show'>
           Show Revenue
         </a>
