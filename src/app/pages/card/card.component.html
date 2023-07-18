@@ -29,7 +29,7 @@
     <div class="product-card"  >
       <img src="{{productInfo.productImage}}" alt="{{productInfo.productName}}">
   
-        <h4>{{productInfo.productName}}</h4>
+        <h4 class="product-name">{{productInfo.productName}}</h4>
         <div>
           <!-- <span class="product-h3"><strong>Description: </strong>{{productInfo.productDescription}}</span> -->
           <span><strong>{{productInfo.productPrice | currency}}</strong></span>
@@ -38,7 +38,7 @@
           <button routerLink="/product/{{productInfo.productId}}" *ngIf="productInfo.productStatus == 0; else offBlock"
           >+</button>
         </div>
-        <ng-template #offBlock><a class="btn btn-secondary btn-lg disabled">Unavailable</a></ng-template>
+        <ng-template #offBlock><a class="btn btn-secondary  btn-lg disabled">Unavailable</a></ng-template>
      
     </div>
   </div>

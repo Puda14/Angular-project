@@ -1,10 +1,4 @@
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 <h1 class="display-4">Revenue of Year and Month</h1>
 <form #revenueForm="ngForm" (ngSubmit)="calculateRevenue(revenueForm)">
     <div class="form-group">
@@ -22,7 +16,7 @@
 
   
 <div *ngIf="show">
-    <h3>Revenue for {{month}}/{{year}}:</h3>
+    <h3>Revenue of {{month}}/{{year}}:</h3>
     <p>Total amount: {{revenue}}</p>
   </div>
   

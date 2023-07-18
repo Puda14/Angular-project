@@ -44,6 +44,7 @@ export class UserListComponent implements OnInit, OnDestroy {
         } else {
             this.getProds();
         }
+        
     }
 
     getProds(page: number = 1, size: number = 5) {
