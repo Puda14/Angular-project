@@ -53,7 +53,7 @@ export class CardComponent implements OnInit, OnDestroy {
       this.productService.getAllInPage(+page, +size)
         .subscribe(page => {
           this.page = page;
-          this.title = '⚽ Welcome to our shop! 🏀'
+          this.title = ' Welcome to Sport Shop '
         });
     } else { //  /category/:id
       const type = this.route.snapshot.url[1].path;
