@@ -1,5 +1,4 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-// import {prod, products} from '../shared/mockData';
 import {ProductService} from '../../services/product.service';
 import {ActivatedRoute} from '@angular/router';
 import {Subscription} from "rxjs";
@@ -16,8 +15,7 @@ export class CardComponent implements OnInit, OnDestroy {
   page: any;
   private paramSub: Subscription;
   private querySub: Subscription;
-
-
+  
   constructor(private productService: ProductService,
               private route: ActivatedRoute) {
 
@@ -31,7 +29,7 @@ export class CardComponent implements OnInit, OnDestroy {
     this.paramSub = this.route.params.subscribe(() => {
       this.update();
     });
-
+    this.update();
   }
 
   ngOnDestroy(): void {
@@ -59,10 +57,19 @@ export class CardComponent implements OnInit, OnDestroy {
       const type = this.route.snapshot.url[1].path;
       this.productService.getCategoryInPage(+type, page, size)
         .subscribe(categoryPage => {
-          this.title ='🏆' + categoryPage.category + '🎖️';
+          this.title =categoryPage.category ;
           this.page = categoryPage.page;
         });
     }
 
   }
+
+  searchProductsByName(page: number = 1, size: number = 12,name: string) {
+    this.productService.getAllByName(+page, +size, name)
+      .subscribe(page => {
+        this.page = page;
+        this.title = `Search results for "${name}"`;
+      });
+  }
+
 }
