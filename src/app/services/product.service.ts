@@ -37,6 +37,13 @@ export class ProductService {
         );
     }
 
+    getByTopSale(): Observable<any>{
+        const url = `${this.productUrl}/best-seller`;
+        return this.http.get(url).pipe(
+
+        );
+    }
+
     getDetail(id: String): Observable<ProductInfo> {
         const url = `${this.productUrl}/${id}`;
         return this.http.get<ProductInfo>(url).pipe(

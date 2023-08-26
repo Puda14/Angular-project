@@ -13,8 +13,11 @@ export class CardComponent implements OnInit, OnDestroy {
 
   title: string;
   page: any;
+  bestSellerPage : any;
   private paramSub: Subscription;
   private querySub: Subscription;
+  showBestSellers: boolean = false;
+
   
   constructor(private productService: ProductService,
               private route: ActivatedRoute) {
@@ -29,6 +32,7 @@ export class CardComponent implements OnInit, OnDestroy {
     this.paramSub = this.route.params.subscribe(() => {
       this.update();
     });
+    this.getBestSelletProds();
     this.update();
   }
 
@@ -59,9 +63,19 @@ export class CardComponent implements OnInit, OnDestroy {
         .subscribe(categoryPage => {
           this.title =categoryPage.category ;
           this.page = categoryPage.page;
+          this.hideBestSellers();
         });
     }
 
+  }
+
+  getBestSelletProds(){
+    this.productService.getByTopSale().subscribe(page =>{
+      this.bestSellerPage=page;
+      this.title = 'Best Seller'
+      this.showBestSellers = true;
+    }
+      );
   }
 
   searchProductsByName(page: number = 1, size: number = 12,name: string) {
@@ -69,7 +83,11 @@ export class CardComponent implements OnInit, OnDestroy {
       .subscribe(page => {
         this.page = page;
         this.title = `Search results for "${name}"`;
+        this.hideBestSellers();
       });
   }
 
+  hideBestSellers() {
+    this.showBestSellers = false;
+  }
 }

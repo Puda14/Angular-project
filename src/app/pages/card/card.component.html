@@ -4,7 +4,30 @@
   <input type="text" [(ngModel)]="productName" placeholder="Search by product name">
   <button (click)="searchProductsByName(1,12,productName)">Search</button>
 </div>
+<div *ngIf="showBestSellers"> <h2>Best Seller</h2></div>
+<div *ngIf="showBestSellers" class="product-container row">
+ 
+  <div *ngFor="let productInfo of bestSellerPage?.content" class="col-lg-4">
+    <div class="product-card"  >
+      <img src="{{productInfo.productImage}}" alt="{{productInfo.productName}}">
+  
+        <h4 class="product-name">{{productInfo.productName}}</h4>
+        <div>
+          <!-- <span class="product-h3"><strong>Description: </strong>{{productInfo.productDescription}}</span> -->
+          <span><strong>{{productInfo.productPrice | currency}}</strong></span>
+          <!-- <span class="product-h3"><strong>Stock: </strong>{{productInfo.productStock}}</span> -->
+
+          <button routerLink="/product/{{productInfo.productId}}" *ngIf="productInfo.productStatus == 0; else offBlock"
+          >+</button>
+        </div>
+        <ng-template #offBlock><a class="btn btn-secondary  btn-lg disabled">Unavailable</a></ng-template>
+     
+    </div>
+  </div>
+</div>
+<div><h2>Products</h2></div>
 <div class="product-container row">
+  
   <div *ngFor="let productInfo of page?.content" class="col-lg-4">
     <div class="product-card"  >
       <img src="{{productInfo.productImage}}" alt="{{productInfo.productName}}">
