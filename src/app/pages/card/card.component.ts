@@ -72,7 +72,7 @@ export class CardComponent implements OnInit, OnDestroy {
   getBestSelletProds(){
     this.productService.getByTopSale().subscribe(page =>{
       this.bestSellerPage=page;
-      this.title = 'Best Seller'
+      this.title = 'Products'
       this.showBestSellers = true;
     }
       );
