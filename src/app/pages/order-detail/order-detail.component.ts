@@ -5,6 +5,11 @@ import {Order} from "../../models/Order";
 import {ActivatedRoute} from "@angular/router";
 import {Review} from '../../models/Review';
 import { ReviewService } from 'src/app/services/review.service';
+import {UserService} from "../../services/user.service";
+import {JwtResponse} from "../../response/JwtResponse";
+import {Subscription} from "rxjs";
+import {Role} from "../../enum/Role";
+
 @Component({
     selector: 'app-order-detail',
     templateUrl: './order-detail.component.html',
@@ -14,9 +19,14 @@ export class OrderDetailComponent implements OnInit {
 
     constructor(private orderService: OrderService,
                 private route: ActivatedRoute,
-                private reviewService : ReviewService) {
+                private reviewService : ReviewService,
+                private userService: UserService) {
     }
-
+    currentUserSubscription: Subscription;
+    name$;
+    name: string;
+    currentUser: JwtResponse;
+    Role = Role;
     review = new Review();
     order$: Observable<Order>;
 
@@ -28,6 +38,9 @@ export class OrderDetailComponent implements OnInit {
         //     map(paramMap =>paramMap.get('id')),
         //     switchMap((id:string) => this.orderService.show(id))
         // )
+        this.currentUserSubscription = this.userService.currentUser.subscribe(user => {
+            this.currentUser = user;
+        });
         this.order$ = this.orderService.show(this.route.snapshot.paramMap.get('id'));
         this.review.rating = 5;
         this.review.comment = 'good';

@@ -27,7 +27,7 @@ export class ProductNewComponent implements OnInit, AfterContentChecked {
     onSubmit() {
         this.productService.create(this.product).subscribe(prod => {
             if (!prod) throw new Error;
-            this.router.navigate(['/']);
+            this.router.navigate(['/seller/product']);
         },
               (error) => {
                 // Xử lý lỗi khi thêm sản phẩm

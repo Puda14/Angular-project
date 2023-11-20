@@ -24,10 +24,12 @@
         <td class="align-middle">{{item.count}}</td>
         <td class="align-middle">{{(item.productPrice * item.count | currency)}}</td>
         <td class="align-middle">
+            <ng-container *ngIf="currentUser.role == Role.Customer">
             <ng-container *ngIf="(order$ | async)?.orderStatus === 1">
                 
                 <button class="review-button" (click)="openReviewModal(i)">Review</button>
             </ng-container> 
+        </ng-container>
             <div *ngIf="isReviewModalOpen[i]" class="review-modal">
                 <div>
                     <label for="rating">Rating</label>
